@@ -17,5 +17,5 @@ jobs:
           docker build ./ -t rendi/example:latest 
       - name: push image to docker hub
         run: |
-          docker login -u xbtdevel  
+          docker login -u xbtdevel -p ${{secrets.RENDI_DOCKER_TEST_KEY}}  
           docker push rendi/example:latest 
