@@ -15,8 +15,8 @@ jobs:
         uses: actions/checkout@v4
       - name: build image
         run: |
-          docker build ./ -t rendi/example:latest 
+          docker build ./ -t xbtdevel/example:latest 
       - name: push image to docker hub
         run: |
           docker login -u xbtdevel -p ${{secrets.RENDI_DOCKER_TEST_KEY}}  
-          docker push rendi/example:latest 
+          docker push xbtdevel/example:latest 
