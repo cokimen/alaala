@@ -1,8 +1,9 @@
 name: Build and Publish image to Docker Hub
 on:
   push:
-    branches:
-      - master
+    branches: ["master"]
+  pull_request:
+    branches: [ "master" ]    
     paths:
       - 'dockerfile'
 
